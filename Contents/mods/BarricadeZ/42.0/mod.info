@@ -1,0 +1,7 @@
+name=BarricadesZ
+id=BarricadesZ42
+description=Build barricades.
+pack=BarricadeZ
+tiledef=BarricadeZ 8963
+poster=poster.png
+icon=icon.png

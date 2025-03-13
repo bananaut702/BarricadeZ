@@ -1,0 +1,48 @@
+module Base
+{
+    xuiSkin default
+    {
+        entity ES_MakeShiftBarricade1_46
+        {
+            LuaWindowClass  = ISEntityWindow,
+            DisplayName   = Makeshift Barricade,
+            Icon      = Barricade1_46,
+        }
+    }
+    entity MakeShiftBarricade1_46
+    {
+        component UiConfig
+        {
+            xuiSkin         = default,
+            entityStyle     = ES_MakeShiftBarricade1_46,
+            uiEnabled       = false,
+        }
+        component SpriteConfig
+        {
+            skillBaseHealth = 300,
+            bonusHealth     = 400,
+            face E
+            {
+                layer
+                {
+                    row = Barricade1_46,
+                }
+            }
+        }
+        component CraftRecipe
+        {
+            timedAction   = BuildWoodenStructureMedium,
+            time          = 80,
+            SkillRequired = Woodwork:1,
+            xpAward = Woodwork:10,
+            category = Fortification,
+            ToolTip = A hastily assembled barricade made from salvaged debris.,
+            inputs
+            {
+                item 1 tags[Hammer] mode:keep flags[Prop1],
+                item 4 [Base.Plank],
+                item 4 [Base.Nails],
+            }
+        }
+    }
+}
